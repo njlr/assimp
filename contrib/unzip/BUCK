@@ -1,0 +1,20 @@
+cxx_library(
+  name = 'unzip',
+  header_namespace = 'contrib/unzip',
+  exported_headers = subdir_glob([
+    ('', '*.h'),
+  ]),
+  srcs = glob([
+    '*.c',
+  ]),
+  compiler_flags = [
+    '-DASSIMP_BUILD_NO_OWN_ZLIB',
+  ],
+  visibility = [
+    '//...',
+  ],
+  deps = [
+    # '//contrib/zlib:zlib',
+    'madler-zlib//:zlib',
+  ],
+)

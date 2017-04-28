@@ -1,0 +1,26 @@
+macos_compiler_flags = [
+  '-I/System/Library/Frameworks/GLUT.framework/Headers',
+]
+
+macos_linker_flags = [
+  '-framework', 'OpenGL',
+  '-framework', 'GLUT',
+]
+
+cxx_binary(
+  name = 'SimpleOpenGL',
+  srcs = [
+    'Sample_SimpleOpenGL.c',
+  ],
+  platform_compiler_flags = [
+    ('default', macos_compiler_flags),
+    ('^macos.*', macos_compiler_flags),
+  ],
+  platform_linker_flags = [
+    ('default', macos_linker_flags),
+    ('^macos.*', macos_linker_flags),
+  ],
+  deps = [
+    '//:assimp',
+  ],
+)

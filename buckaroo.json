@@ -1,0 +1,7 @@
+{
+  "name": "assimp",
+  "dependencies": {
+    "google/gtest": "1.8.0",
+    "madler/zlib": "1.2.11"
+  }
+}

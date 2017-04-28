@@ -1,0 +1,16 @@
+cxx_test(
+  name = 'unit',
+  srcs = glob([
+    '*.cpp',
+  ], excludes = [
+    'utNoBoostTest.cpp',
+  ]),
+  compiler_flags = [
+    '-std=c++11',
+    '-DASSIMP_TEST_MODELS_DIR="test/models"',
+  ],
+  deps = [
+    '//:assimp-headers',
+    '//:assimp',
+  ],
+)

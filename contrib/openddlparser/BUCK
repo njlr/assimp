@@ -1,0 +1,16 @@
+cxx_library(
+  name = 'openddlparser',
+  header_namespace = 'openddlparser',
+  exported_headers = subdir_glob([
+    ('include/openddlparser', '**/*.h'),
+  ]),
+  srcs = glob([
+    'code/**/*.cpp',
+  ]),
+  compiler_flags = [
+    '-std=c++11',
+  ],
+  visibility = [
+    '//...',
+  ],
+)

@@ -2,6 +2,7 @@
 
 #include <assimp/cexport.h>
 #include <assimp/Exporter.hpp>
+#include <assimp/Importer.hpp>
 
 
 #ifndef ASSIMP_BUILD_NO_EXPORT

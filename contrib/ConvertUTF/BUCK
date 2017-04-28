@@ -1,0 +1,13 @@
+cxx_library(
+  name = 'ConvertUTF',
+  header_namespace = '',
+  exported_headers = [
+    'ConvertUTF.h',
+  ],
+  srcs = [
+    'ConvertUTF.c',
+  ],
+  visibility = [
+    '//...',
+  ],
+)

@@ -1,0 +1,16 @@
+cxx_library(
+  name = 'poly2tri',
+  header_namespace = 'poly2tri',
+  exported_headers = subdir_glob([
+    ('poly2tri', '**/*.h'),
+  ]),
+  srcs = glob([
+    'poly2tri/**/*.cc',
+  ]),
+  compiler_flags = [
+    '-std=c++11',
+  ],
+  visibility = [
+    '//...',
+  ],
+)
